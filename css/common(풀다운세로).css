@@ -1,0 +1,165 @@
+@charset 'utf-8';
+@import url('webfonts.css');
+/* 리셋 */
+:root {
+  --primary-font: 'Poppins','Pretendard Variable',sans-serif;
+  --secondary-font: 'Pretendard Variable',sans-serif;
+  --serif-font: 'Noto Serif', 'Nanum+Myeongjo', sans-serif;
+  --primary-color: #373333;
+  --secondary-color: #1d1919;
+  
+
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+*:before, *:after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body { /* 배경색, 글자(크기, 색상, 글꼴, 줄간격)  */
+  font-size: 16px;
+  font-family: var(--primary-font);
+  color: #111;
+  line-height: 1.6;
+  background-color: #fff;
+}
+ul, ol {
+  list-style-type: none;
+}
+a {
+  color: #111;
+  text-decoration: none;
+}
+img, video, iframe {
+  vertical-align: middle;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+input, select, textarea, button {
+  border: 0;
+  font-size: 1em;
+  background-color: transparent;
+  font-family: var(--primary-font);
+  color: #111;
+}
+
+/* 공용클래스 */
+.wrap {
+  max-width: 1900px;
+  padding: 0 16px; /* 모바일에서 사용하는 좌우패딩 */
+  margin: auto;
+}
+.blind {
+  position: absolute;
+  left: -9999em;
+}
+.clearfix:after {
+  /* 1. 가로 나열을 float을 이용해 하는 경우 부모의 높이가 '0'
+  :after를 생성해서 끄트머리에 배치 */
+  content: '';
+  display: block;
+  clear: both;
+  /* 2. float으로 가로 나열한 자식을 가지고 있는 부모 영역에 
+  overflow: auto를 설계하면 높이 문제를 해결
+  clearfix 필요 없음 */
+}
+.wh, .wh a {
+  color: #fff;
+}
+.bk, .bk a {
+  color: #000;
+}
+.primary, .primary a {
+  color: var(--primary-color);
+}
+
+/* 헤더 */
+#estee-hd {
+  background-color: #1d1919;
+}
+.hd-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.logo a {}
+.logo img {}
+#estee-gnb {}
+.estee-gnb {
+  position: relative;
+  display: flex;
+}
+#estee-gnb:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 100px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  background-color: #111;
+  transition: 0.3s;
+}
+#estee-gnb.sub-on:before {
+  height: 250px;
+}
+.depth1 {}
+.depth1 > a {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0 40px;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #f00;
+}
+.depth2-wrap {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100px;
+  width: 240px;
+  padding: 24px;
+}
+.depth1:nth-child(1) .depth2-wrap {transform: translateX(-250%);}
+.depth1:nth-child(2) .depth2-wrap {transform: translateX(-150%);}
+.depth1:nth-child(3) .depth2-wrap {transform: translateX(-50%);}
+.depth1:nth-child(4) .depth2-wrap {transform: translateX(50%);}
+.depth1:nth-child(5) .depth2-wrap {transform: translateX(150%);}
+.depth2 {
+  font-size: 1.2em;
+  font-weight: 200;
+}
+/* .depth1:nth-child(1) .depth2 {
+  display: block;
+} 디자인 보려고 켠 것 */
+.depth2 li {}
+.depth2 li a {}
+.depth3 {}
+.depth3 li {}
+.depth3 li a {}
+.util-menu {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.util-menu button {
+  color: #fff;
+}
+
+/* 푸터 */

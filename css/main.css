@@ -1,0 +1,66 @@
+@charset 'utf-8';
+
+/* 공용 */
+#estee-main {
+  padding-top: 33px; /* 모바일 헤더 높이 */
+}
+.main-section {
+  min-height: 100vh;
+  border-bottom: 1px solid #ddd;
+}
+.main-section h2 {
+  /* position: static; */
+}
+.main-container {}
+
+/* 히어로 영역 */
+.main-section-hero {}
+.hero-wrap {}
+.hero-container {
+  position: relative;
+  padding-top: 100%; /* 1:1 비율박스 */
+}
+.hero_video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* 브랜드 아이덴티티 영역 */
+.main-section-identity {
+  padding: var(--spacing-m) 0;
+}
+.identity-wrap {}
+.identity-container {}
+
+/* 브랜드 소개 영역 */
+.main-section-brands {
+  padding: var(--spacing-m) 0;
+}
+.brands-wrap {}
+.brands-container {}
+
+/* 사회적 영향력 영역 */
+.main-section-social {
+  padding: var(--spacing-m) 0;
+}
+.social-wrap {}
+.social-container {}
+
+/* 기업문화 영역 */
+.main-section-culture {
+  padding: var(--spacing-m) 0;
+}
+.culture-wrap {}
+.culture-container {}
+
+/* 커리어 영역 */
+.main-section-career {
+  padding: var(--spacing-m) 0;
+}
+.career-wrap {}
+.career-container {}
